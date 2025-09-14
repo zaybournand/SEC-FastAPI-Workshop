@@ -1,68 +1,97 @@
-# SEC-FastAPI-Workshop
+# 🌦️ SEC-FastAPI-Workshop
 
-FastAPI AI-Powered Weather API
+**FastAPI AI-Powered Weather API**
 
-⚙️ How It Works
-The application follows a simple, robust workflow for every user request:
+This project demonstrates how to build a simple **AI-powered weather API** using **FastAPI**, **Gemini**, and **OpenWeatherMap**.  
+It combines **natural language processing** with structured data retrieval to deliver weather forecasts in a friendly, conversational way.
 
-Natural Language Processing (NLP): The application sends a natural language query (e.g., "What's the weather like in London on Monday?") to the Gemini API.
+---
 
-Structured Data Extraction: Using a specific prompt, Gemini extracts the key information (city and date) and returns it in a clean JSON format.
+## ⚙️ How It Works
 
-Data Retrieval: The application uses the extracted city and date to make a targeted request to the OpenWeatherMap API.
+The workflow for each user request:
 
-Friendly Response Generation: The raw weather data is then sent back to Gemini with instructions to format it into a friendly, human-readable sentence.
+1. **Natural Language Processing (NLP)**
 
-Final Response: The final, AI-generated response is sent back to the user.
+   - The user submits a natural query like:
+     > _"What's the weather like in London on Monday?"_
+   - The query is sent to the **Gemini API**.
 
-🚀 Getting Started
-Follow these steps to set up and run the project locally.
+2. **Structured Data Extraction**
 
-Prerequisites
-Python 3.8+
+   - Gemini extracts the **city** and **date** from the query.
+   - Returns them in a clean **JSON format**.
 
-A Gemini API Key (obtained from Google AI Studio)
+3. **Data Retrieval**
 
-An OpenWeatherMap API Key (obtained from OpenWeatherMap)
+   - The app uses the extracted city and date to request weather data from the **OpenWeatherMap API**.
 
-Setup
-Clone the repository and navigate to the project directory:
+4. **Friendly Response Generation**
 
+   - Raw weather data is sent back to Gemini with formatting instructions.
+   - Gemini returns a **human-readable forecast sentence**.
+
+5. **Final Response**
+   - The app delivers the AI-generated weather forecast back to the user.
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+- Python **3.8+**
+- **Gemini API Key** (from [Google AI Studio](https://aistudio.google.com/))
+- **OpenWeatherMap API Key** (from [OpenWeatherMap](https://openweathermap.org/api))
+
+---
+
+### ⚡ Setup
+
+Clone the repository and navigate into the project directory:
+
+```bash
 git clone [your-repo-url]
 cd weather-ai
 
-Create a Python virtual environment and activate it:
+Create and activate a virtual environment:
 
 python -m venv venv
-source venv/bin/activate # On Windows, use `venv\Scripts\activate`
+source venv/bin/activate   # On Windows: venv\Scripts\activate
 
-Install the required dependencies:
-
-pip install -r requirements.txt
-
-Create a .env file:
-In the root of the project, create a file named .env and add your API keys.
+Create a .env file in the project root and add your keys:
 
 GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
 WEATHER_API_KEY="YOUR_OPENWEATHERMAP_API_KEY"
 
-Running the Application
-Start the Uvicorn server:
-The --reload flag will automatically restart the server when you make changes to the code.
+▶️ Running the Application
+
+Start the FastAPI server with Uvicorn:
 
 uvicorn main:app --reload
 
-Access the API:
-Your application will be running at http://127.0.0.1:8000. You can interact with it using the automatically generated documentation:
+
+Your API will be available at:
+
+Base URL: http://127.0.0.1:8000
 
 Swagger UI: http://127.0.0.1:8000/docs
 
 Redoc: http://127.0.0.1:8000/redoc
 
-You can submit a natural language query to the /weather endpoint.
+You can test queries at the /weather endpoint.
 
-Free Tier Limits: Both APIs have generous free tiers for development. It is important to know their limits to avoid unexpected costs.
+💰 Free Tier Limits
 
-Gemini API: Typically 15 requests per minute and 1,500 requests per day.
+Be mindful of API usage to avoid exceeding free quotas:
 
-OpenWeatherMap API: 1,000 free calls per day.
+Gemini API:
+
+Up to 15 requests/minute
+
+Up to 1,500 requests/day
+
+OpenWeatherMap API:
+
+Up to 1,000 free requests/day
+```
