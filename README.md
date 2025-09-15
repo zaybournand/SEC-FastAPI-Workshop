@@ -59,17 +59,21 @@ The workflow for each user request:
 - python -m venv venv
 - source venv/bin/activate # On Windows: venv\Scripts\activate
 
-#### 3. Create a .env file in the project root and add your keys:
+#### 3. Install Dependencies:
+
+- pip install fastapi uvicorn requests python-dotenv google-generativeai google-api-core
+
+#### 4. Create a .env file in the project root and add your keys:
 
 - GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
 - WEATHER_API_KEY="YOUR_OPENWEATHERMAP_API_KEY"
 
-#### 4. ▶️ Running the Application \*\*
+#### 5. ▶️ Running the Application
 
 - Start the FastAPI server with Uvicorn:
 - uvicorn main:app --reload
 
-#### 5. Your API will be available at:
+#### 6. Your API will be available at:
 
 - Base URL: http://127.0.0.1:8000
 - Swagger UI: http://127.0.0.1:8000/docs
@@ -77,7 +81,7 @@ The workflow for each user request:
 
 ### 💰 Free Tier Limits:
 
-1. Be mindful of API usage to avoid exceeding free quotas:
+Be mindful of API usage to avoid exceeding free quotas:
 
 Gemini API:
 
@@ -87,3 +91,4 @@ Gemini API:
 OpenWeatherMap API:
 
 - Up to 1,000 free requests/day
+
