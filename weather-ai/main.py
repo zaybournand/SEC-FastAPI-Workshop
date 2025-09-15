@@ -5,6 +5,7 @@ from google.api_core.exceptions import ResourceExhausted
 from requests.exceptions import RequestException
 from dotenv import load_dotenv
 import os
+import json
 from datetime import datetime
 
 # Load environment variables
@@ -47,7 +48,7 @@ def get_weather(query: str):
         )
 
         data = response.candidates[0].content.parts[0].text
-        city_date = eval(data)  
+        city_date = json.loads(data)
         city = city_date.get("city")
         date_str = city_date.get("date")
 
