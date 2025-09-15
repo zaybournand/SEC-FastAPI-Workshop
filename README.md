@@ -48,50 +48,42 @@ The workflow for each user request:
 
 ### ⚡ Setup
 
-Clone the repository and navigate into the project directory:
+#### 1. Clone the repository and navigate into the project directory:
 
-```bash
-git clone [your-repo-url]
-cd weather-ai
+- git clone https://github.com/zaybournand/SEC-FastAPI-Workshop.git
+- cd SEC-FastAPI-Workshop
+- cd weather-ai
 
-Create and activate a virtual environment:
+#### 2. Create and activate a virtual environment:
 
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+- python -m venv venv
+- source venv/bin/activate # On Windows: venv\Scripts\activate
 
-Create a .env file in the project root and add your keys:
+#### 3. Create a .env file in the project root and add your keys:
 
-GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
-WEATHER_API_KEY="YOUR_OPENWEATHERMAP_API_KEY"
+- GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+- WEATHER_API_KEY="YOUR_OPENWEATHERMAP_API_KEY"
 
-▶️ Running the Application
+#### 4. ▶️ Running the Application \*\*
 
-Start the FastAPI server with Uvicorn:
+- Start the FastAPI server with Uvicorn:
+- uvicorn main:app --reload
 
-uvicorn main:app --reload
+#### 5. Your API will be available at:
 
+- Base URL: http://127.0.0.1:8000
+- Swagger UI: http://127.0.0.1:8000/docs
+- Redoc: http://127.0.0.1:8000/redoc
 
-Your API will be available at:
+### 💰 Free Tier Limits:
 
-Base URL: http://127.0.0.1:8000
-
-Swagger UI: http://127.0.0.1:8000/docs
-
-Redoc: http://127.0.0.1:8000/redoc
-
-You can test queries at the /weather endpoint.
-
-💰 Free Tier Limits
-
-Be mindful of API usage to avoid exceeding free quotas:
+1. Be mindful of API usage to avoid exceeding free quotas:
 
 Gemini API:
 
-Up to 15 requests/minute
-
-Up to 1,500 requests/day
+- Up to 15 requests/minute
+- Up to 1,500 requests/day
 
 OpenWeatherMap API:
 
-Up to 1,000 free requests/day
-```
+- Up to 1,000 free requests/day
