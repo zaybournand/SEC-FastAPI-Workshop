@@ -61,7 +61,7 @@ The workflow for each user request:
 
 #### 3. Install Dependencies:
 
-- pip install fastapi uvicorn requests python-dotenv google-generativeai google-api-core
+- pip install -r requirements.txt
 
 #### 4. Create a .env file in the project root and add your keys:
 
