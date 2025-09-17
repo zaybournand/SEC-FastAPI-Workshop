@@ -61,7 +61,7 @@ The workflow for each user request:
 
 #### 3. Install Dependencies:
 
-- pip install -r requirements.txt
+- pip install -r requirements.txt or use pip install fastapi 'uvicorn[standard]' requests python-dotenv google-genai google-api-core pydantic
 
 #### 4. Create a .env file in the project root and add your keys:
 
