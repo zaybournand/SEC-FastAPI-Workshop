@@ -71,7 +71,7 @@ The workflow for each user request:
 #### 5. ▶️ Running the Application
 
 - Start the FastAPI server with Uvicorn:
-- uvicorn main:app --reload
+- uvicorn weather-ai.main:app --reload
 
 #### 6. Your API will be available at:
 
